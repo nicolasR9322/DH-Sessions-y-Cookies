@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+<body>
+    <%- include("./partials/header") %>
+
+
+    <main>
+        <form action="/" method="post">
+            
+            <% if (!locals.name) { %>
+                <label for="name">Ingrese su nombre:
+                    <input type="text" name="name" value="<%= locals.old && old.name %>">
+                    <p class="error"><%= locals.errors && errors.name ? errors.name.msg : null %></p>
+                </label> 
+                    <select name="color" id="color">
+                        <option value="" hidden>Elija una opcion</option>
+                            <% colores.forEach(color => { %>
+                            <option value="<%= color %>" <%= locals.old && (color === old.color) ? "selected" : null %>>
+                                <%= color %>
+                            </option>
+                            <% }) %>
+                    </select>
+
+                    
+                    <p class="error"><%= locals.errors && errors.color ? errors.color.msg : null %></p>
+    
+                    <label for="email">Ingrese su email:
+                        <input type="email" name="email" id="email" value="<%= locals.old && old.email %>">
+                        <p class="error"><%= locals.errors && errors.email ? errors.email.msg : null %></p>
+                    </label>
+    
+                    <label for="age">Ingrese su edad:
+                        <input type="number" name="age" id="age" value="<%= locals.old && old.age %>">
+                        <p class="error"><%= locals.errors && errors.age ? errors.age.msg : null %></p>
+                    </label>
+                    <button type="submit">Enviar</button>
+                    </form>
+            <% } else { %>
+                <p>Hola: <%= name %></p>
+                <p>elegiste el color: <%= color %></p>
+                <p>tu email es: <%= email %></p>
+                <p>tu edad es <%= age %></p>
+            <% } %>
+
+    </main>
+
+
+    <%- include("./partials/footer") %>
+</body>
+</html>
