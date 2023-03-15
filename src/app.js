@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const PORT = 3030;
+const session = require("express-session");
 
 // router
 const indexRouter = require("./routes/indexRouter")
@@ -12,6 +13,7 @@ app.set("views", "./src/views")
 // middlewares
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:false}));
+app.use(session({secret:"DH"}))
 
 // routes
 app.use("/", indexRouter)

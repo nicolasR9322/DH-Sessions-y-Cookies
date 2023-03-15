@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("./partials/head") %>
-<body>
+<body class="<%= locals.old && old.color ? old.color : locals.color%>">
     <%- include("./partials/header") %>
 
 
@@ -41,6 +41,11 @@
                 <p>elegiste el color: <%= color %></p>
                 <p>tu email es: <%= email %></p>
                 <p>tu edad es <%= age %></p>
+                <p>
+                    <a href="/welcome">
+                        Ir a la pagina de bienvenida
+                    </a>
+                </p>
             <% } %>
 
     </main>

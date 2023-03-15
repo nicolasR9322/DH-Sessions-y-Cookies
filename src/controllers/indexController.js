@@ -1,6 +1,8 @@
 const {validationResult} = require("express-validator");
 
-let colores = ["rojo","azul","verde","blanco","negro"]
+let colores = ["rojo","azul","verde","blanco","negro"];
+
+
 
 module.exports = {
     index: (req,res) => {
@@ -10,10 +12,16 @@ module.exports = {
     },
     stored: (req,res) => {
         let {name,color,email,age} = req.body
-        
+
         let errors = validationResult(req)
 
+        
+
         if(errors.isEmpty()){
+            req.session.user = {
+                name,
+                color
+            }
             return res.render("index", {
                 name,color,email,age,colores
             })  
@@ -24,5 +32,14 @@ module.exports = {
                 colores
             })
         }
+    },
+    welcome: (req,res) => {
+        
+        let user = req.session.user
+
+        res.render("welcome",{
+            user
+        })
+        
     }
 }

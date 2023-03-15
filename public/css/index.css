@@ -89,3 +89,33 @@ button:hover{
     background-color: blanchedalmond;
     cursor: pointer;
 }
+
+.rojo{
+    background-color: red;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.verde{
+    background-color: green;
+}
+
+.blanco{
+    background-color: white;
+}
+
+.negro{
+    background-color: black;
+}
+
+.centro{
+    text-align: center;
+    font-size: 3rem;
+    background-color: white;
+    border: 3px solid violet;
+    padding: 3rem;
+    width: 30%;
+    margin: 0 auto;
+}

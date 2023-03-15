@@ -19,3 +19,10 @@ descripcion:trabajo práctico en el que se veran conceptos como sesiones, valida
         -validado con express validator
             -todos los campos son requeridos, en caso de estar vacios mostrar el mensaje correspondiente
             -en caso de edad, si no es un numero mostrara un error
+    
+    desafio 2:
+    modificaciones de estilos
+            -cuando se haga envie el formulario, debera cambiar el fondo por el color elegido
+            
+            -crear otra vista donde se aplique el cambio del background segun el usuario y se visualice el mensaje
+                -"nombre", gracias por visitarnos 
