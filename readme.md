@@ -26,3 +26,8 @@ descripcion:trabajo práctico en el que se veran conceptos como sesiones, valida
             
             -crear otra vista donde se aplique el cambio del background segun el usuario y se visualice el mensaje
                 -"nombre", gracias por visitarnos 
+
+    desafio 3:
+    modificacion del formulario:
+            -agregar un checkbox que diga "recordar color" y que si el visitante tilda este checkbox el color elegido persista cuando se cierre y abra el navegador
+            -implementar un boton que funcione para "olvidar el color" y lo vuelva a su estado inicial

@@ -14,6 +14,10 @@ header{
     
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
 
 header ul{
     list-style: none;
@@ -52,7 +56,7 @@ main{
     width: 90%;
     margin: 0 auto;
 }
-form{
+form.form{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -65,7 +69,8 @@ form{
     margin: 1rem;
     background-color: rgb(204, 204, 204);
     margin: 1rem auto;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 15px black;
 }
 
 input{
@@ -78,44 +83,70 @@ input{
     color: red;
 }
 
-button{
+form.form button{
     border-radius: 15px;
     background-color: darksalmon;
     padding: 0.5rem;
 }
 
-button:hover{
+form.form button:hover{
     color: black;
     background-color: blanchedalmond;
     cursor: pointer;
 }
 
+select{
+    width: 50%;
+    
+}
+option{
+    text-align: center;
+}
+
 .rojo{
-    background-color: red;
+    background: linear-gradient(red,black,red);
 }
 
 .azul{
-    background-color: blue;
+    background: linear-gradient(blue,black,blue);
 }
 
 .verde{
-    background-color: green;
+    background: linear-gradient(green,black,green);
 }
 
 .blanco{
-    background-color: white;
+    background: linear-gradient(white,black,white);
 }
 
 .negro{
-    background-color: black;
+    background: linear-gradient(black,white,black);
 }
 
 .centro{
-    text-align: center;
+    
     font-size: 3rem;
     background-color: white;
     border: 3px solid violet;
     padding: 3rem;
-    width: 30%;
+    width: 50%;
     margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.boton{
+background-color: white;
+border: 1px solid black;
+}
+
+input#checkbox{
+    display: inline;
+    width: 10%;
+    min-width: 0;
+}
+
+.form-header button{
+    border: none;
+    background: none;
+    cursor: pointer;
 }

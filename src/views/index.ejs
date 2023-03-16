@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("./partials/head") %>
-<body class="<%= locals.old && old.color ? old.color : locals.color%>">
+<body class="<%= locals.color ? locals.color : null %>">
+    <!-- locals.old && old.color ? old.color : locals.color -->
     <%- include("./partials/header") %>
 
 
     <main>
-        <form action="/" method="post">
+        <form action="/" method="post" class="form">
             
             <% if (!locals.name) { %>
                 <label for="name">Ingrese su nombre:
@@ -34,6 +35,10 @@
                         <input type="number" name="age" id="age" value="<%= locals.old && old.age %>">
                         <p class="error"><%= locals.errors && errors.age ? errors.age.msg : null %></p>
                     </label>
+                    <label for="checkbox">Recordar Color
+                        <input type="checkbox" name="checkbox" id="checkbox" <%= locals.old && old.checkbox ? "checked" : null %>>
+                        
+                    </label>
                     <button type="submit">Enviar</button>
                     </form>
             <% } else { %>
@@ -41,7 +46,7 @@
                 <p>elegiste el color: <%= color %></p>
                 <p>tu email es: <%= email %></p>
                 <p>tu edad es <%= age %></p>
-                <p>
+                <p class="boton">
                     <a href="/welcome">
                         Ir a la pagina de bienvenida
                     </a>
@@ -51,6 +56,6 @@
     </main>
 
 
-    <%- include("./partials/footer") %>
+    
 </body>
 </html>
